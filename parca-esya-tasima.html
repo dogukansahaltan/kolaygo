@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KolayGO Nakliyat ile güvenli ve ekonomik parça eşya taşıma hizmetleri. Tek parça eşyadan birkaç parçaya kadar, şehir içi ve şehirler arası parça eşya taşıma çözümleri.">
+    <meta name="keywords" content="parça eşya taşıma, tek parça eşya taşıma, mobilya taşıma, beyaz eşya taşıma, parça eşya nakliyat, İstanbul parça eşya taşıma">
+    <meta name="author" content="KolayGO Nakliyat">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Parça Eşya Taşıma Hizmetleri - KolayGO Nakliyat">
+    <meta property="og:description" content="Profesyonel parça eşya taşıma hizmetleri. Güvenli ve ekonomik taşımacılık. Ücretsiz fiyat teklifi!">
+    <meta property="og:image" content="images/hizmet4.jpg">
+    <meta property="og:url" content="https://kolaygonakliyat.com/parca-esya-tasima">
+    <title>Parça Eşya Taşıma | KolayGO Nakliyat</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#4052CC">
+    <meta name="theme-color" content="#4052CC">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-24">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-white flex items-center">
+                        <div class="bg-white p-1.5 rounded-full mr-3 flex items-center justify-center">
+                            <img src="images/kolaygologo.png" alt="KolayGO Nakliyat Logo" class="h-16 rounded-full">
+                        </div>
+                        <span class="text-white tracking-wider">KOLAYGO <span class="text-[#00D9DA]">NAKLİYAT</span></span>
+                    </a>
+                    <nav class="ml-8 hidden md:flex space-x-6">
+                        <a href="index.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Ana Sayfa</a>
+                        <a href="hakkimizda.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Hakkımızda</a>
+                        <a href="hizmetlerimiz.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-[#00D9DA]">Hizmetlerimiz</a>
+                        <a href="iletisim.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">İletişim</a>
+                    </nav>
+                </div>
+
+                <!-- Right Side -->
+                <div class="flex items-center space-x-6">
+                    <!-- Language Selector -->
+                    <div class="language-selector relative">
+                        <button class="flex items-center text-white">
+                            <i class="fas fa-globe mr-2"></i>
+                            tr
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="language-options hidden absolute top-full right-0 bg-white rounded-lg shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">English</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Türkçe</a>
+                        </div>
+                    </div>
+
+                    <!-- İletişim Butonları -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <a href="tel:05324571362" class="bg-white/10 hover:bg-white/20 text-white flex items-center px-4 py-2 rounded-lg transition-all duration-300 group">
+                            <i class="fas fa-phone-alt mr-2 text-[#00D9DA] group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span class="font-medium">0532 457 13 62</span>
+                        </a>
+                        <a href="https://wa.me/905324571362" target="_blank" class="btn-whatsapp flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span class="font-medium">WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Mobil Menü Butonu -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-[#4052CC] to-[#0063FF] py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center text-white relative z-10">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Parça Eşya Taşıma</h1>
+                    <p class="text-xl text-white/90 mb-8">Tek parça eşyadan birkaç parçaya, güvenli ve ekonomik taşımacılık</p>
+                </div>
+            </div>
+            <!-- Dekoratif Elementler -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Makale İçeriği -->
+        <article class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <!-- Giriş Görseli -->
+                <div class="mb-12 rounded-2xl overflow-hidden">
+                    <img src="images/hizmet4.jpg" alt="Parça Eşya Taşıma" class="w-full h-auto">
+                </div>
+
+                <!-- Giriş Paragrafı -->
+                <div class="prose max-w-none">
+                    <h2 class="text-3xl font-bold text-[#1a365d] mb-6">Profesyonel Parça Eşya Taşıma Hizmeti</h2>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        KolayGO Nakliyat olarak, tek bir mobilyadan birkaç parça eşyaya kadar her türlü parça eşya taşıma ihtiyacınızda yanınızdayız. Özel paketleme malzemelerimiz ve deneyimli ekibimizle eşyalarınızı güvenle taşıyoruz.
+                    </p>
+
+                    <!-- Hizmet Detayları -->
+                    <h3 class="text-2xl font-bold text-[#1a365d] mb-4 mt-12">Parça Eşya Taşıma Hizmetlerimiz</h3>
+                    
+                    <ul class="list-disc pl-6 mb-8 text-gray-700 space-y-4">
+                        <li>Tek parça mobilya taşıma</li>
+                        <li>Beyaz eşya taşıma ve kurulum</li>
+                        <li>Antika ve değerli eşya taşıma</li>
+                        <li>Ofis ekipmanları taşıma</li>
+                        <li>Şehir içi ve şehirler arası taşıma</li>
+                        <li>Profesyonel paketleme</li>
+                        <li>Montaj ve demontaj hizmeti</li>
+                    </ul>
+
+                    <!-- Taşıma Süreci -->
+                    <h3 class="text-2xl font-bold text-[#1a365d] mb-4 mt-12">Parça Eşya Taşıma Sürecimiz</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-[#4052CC] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-phone-alt text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">1. İletişim ve Fiyat Teklifi</h4>
+                            <p class="text-gray-600">Eşyalarınızın detaylarını alır ve uygun fiyat teklifi sunarız.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-[#4052CC] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-box text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">2. Paketleme ve Yükleme</h4>
+                            <p class="text-gray-600">Eşyalarınızı özenle paketler ve güvenle araca yükleriz.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-[#4052CC] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-check-circle text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">3. Teslimat ve Kurulum</h4>
+                            <p class="text-gray-600">Eşyalarınızı yeni adresinde kurar ve test ederiz.</p>
+                        </div>
+                    </div>
+
+                    <!-- SEO İçerik Bölümü -->
+                    <div class="prose max-w-none mt-16">
+                        <h2 class="text-3xl font-bold text-[#1a365d] mb-6">Parça Eşya Taşıma: Detaylı Bilgi</h2>
+                        
+                        <h3 class="text-2xl font-bold text-[#1a365d] mb-4 mt-8">Parça Eşya Taşıma Nedir?</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Parça eşya taşıma, komple ev taşıma yerine sadece belirli eşyaların taşınması hizmetidir. Bu hizmet, tek bir mobilya parçasından birkaç parça eşyaya kadar değişen miktarlarda eşyanın güvenli bir şekilde taşınmasını kapsar.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-[#1a365d] mb-4 mt-8">Hangi Durumlarda Tercih Edilir?</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                            <ul class="list-disc pl-6 space-y-3 text-gray-700">
+                                <li>İkinci el eşya alım-satımlarında</li>
+                                <li>Öğrenci taşımalarında</li>
+                                <li>Ofis ekipmanı taşımalarında</li>
+                                <li>Beyaz eşya teslimatlarında</li>
+                                <li>Antika ve değerli eşya nakillerinde</li>
+                                <li>Sezonluk eşya depolamalarında</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-[#1a365d] mb-4 mt-8">Sık Sorulan Sorular</h3>
+                        <div class="space-y-6 mb-8">
+                            <div>
+                                <h4 class="font-semibold text-[#1a365d] mb-2">Parça eşya taşıma fiyatları nasıl belirlenir?</h4>
+                                <p class="text-gray-700">Fiyatlar eşyanın boyutu, ağırlığı, mesafe ve ek hizmet ihtiyaçlarına göre belirlenir. Her taşıma için özel fiyat teklifi sunuyoruz.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#1a365d] mb-2">Minimum kaç parça eşya taşınabilir?</h4>
+                                <p class="text-gray-700">Tek bir parça eşya için bile hizmet veriyoruz. Örneğin, sadece bir koltuk veya buzdolabı taşıma işlemi yapabiliyoruz.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#1a365d] mb-2">Şehirler arası parça eşya taşıma yapıyor musunuz?</h4>
+                                <p class="text-gray-700">Evet, Türkiye'nin her noktasına parça eşya taşıma hizmeti veriyoruz. Şehirler arası taşımalarda özel güvenlik önlemleri alıyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Neden KolayGO Nakliyat? -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl font-bold text-[#1a365d] mb-6">Neden KolayGO Nakliyat?</h2>
+                    <p class="text-gray-600">Profesyonel kadromuz ve modern ekipmanlarımızla fark yaratıyoruz</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <!-- Özellik 1 -->
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Tam Sigorta</h3>
+                        <p class="text-gray-600">Tüm eşyalarınız sigorta kapsamında güvence altında</p>
+                    </div>
+
+                    <!-- Özellik 2 -->
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Özel Paketleme</h3>
+                        <p class="text-gray-600">Her eşya için özel ambalaj malzemeleri</p>
+                    </div>
+
+                    <!-- Özellik 3 -->
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Hızlı Teslimat</h3>
+                        <p class="text-gray-600">Zamanında ve güvenli teslimat garantisi</p>
+                    </div>
+
+                    <!-- Özellik 4 -->
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Uygun Fiyat</h3>
+                        <p class="text-gray-600">Ekonomik ve şeffaf fiyatlandırma</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diğer Hizmetlerimiz -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#1a365d] mb-4">Diğer Hizmetlerimiz</h2>
+                    <p class="text-gray-600">Profesyonel nakliyat çözümlerimizi keşfedin</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <!-- Evden Eve Nakliyat -->
+                    <a href="evden-eve-nakliyat.html" class="group h-full">
+                        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-[#4052CC] h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="w-16 h-16 bg-[#4052CC]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#4052CC] transition-all duration-300">
+                                    <i class="fas fa-home text-[#4052CC] text-2xl group-hover:text-white transition-all duration-300"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-[#1a365d] mb-2 group-hover:text-[#4052CC] transition-all duration-300">Evden Eve Nakliyat</h3>
+                                <p class="text-gray-600 text-sm flex-grow">Güvenli ve profesyonel ev taşıma hizmeti</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Ofis Taşımacılığı -->
+                    <a href="ofis-tasimaciligi.html" class="group h-full">
+                        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-[#4052CC] h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="w-16 h-16 bg-[#4052CC]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#4052CC] transition-all duration-300">
+                                    <i class="fas fa-building text-[#4052CC] text-2xl group-hover:text-white transition-all duration-300"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-[#1a365d] mb-2 group-hover:text-[#4052CC] transition-all duration-300">Ofis Taşımacılığı</h3>
+                                <p class="text-gray-600 text-sm flex-grow">İş kesintisiz ofis taşıma çözümleri</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Bireysel ve Kurumsal Nakliyat -->
+                    <a href="kurumsal-nakliyat.html" class="group h-full">
+                        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-[#4052CC] h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="w-16 h-16 bg-[#4052CC]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#4052CC] transition-all duration-300">
+                                    <i class="fas fa-building text-[#4052CC] text-2xl group-hover:text-white transition-all duration-300"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-[#1a365d] mb-2 group-hover:text-[#4052CC] transition-all duration-300">Kurumsal Nakliyat</h3>
+                                <p class="text-gray-600 text-sm flex-grow">İşletmeler için özel nakliye çözümleri</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Şehirlerarası Nakliyat -->
+                    <a href="sehirlerarasi-nakliyat.html" class="group h-full">
+                        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:border-[#4052CC] h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="w-16 h-16 bg-[#4052CC]/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#4052CC] transition-all duration-300">
+                                    <i class="fas fa-truck text-[#4052CC] text-2xl group-hover:text-white transition-all duration-300"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold text-[#1a365d] mb-2 group-hover:text-[#4052CC] transition-all duration-300">Şehirlerarası Nakliyat</h3>
+                                <p class="text-gray-600 text-sm flex-grow">Türkiye'nin her yerine güvenli taşımacılık</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-[#4052CC] to-[#0063FF] py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center text-white">
+                    <h2 class="text-3xl font-bold mb-6">Hemen Teklif Alın</h2>
+                    <p class="text-xl mb-8">Size özel fiyat teklifimizi hemen oluşturalım</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="tel:05324571362" class="bg-white text-[#4052CC] px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            <i class="fas fa-phone-alt mr-2"></i> 0532 457 13 62
+                        </a>
+                        <a href="https://wa.me/905324571362" target="_blank" class="bg-[#25D366] text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer py-16 bg-[#4052CC]">
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Logo ve Sosyal Medya -->
+                <div class="mb-12">
+                    <a href="index.html" class="text-3xl font-bold text-white flex items-center mb-4">
+                        <div class="bg-white p-1 rounded-full mr-3 flex items-center justify-center">
+                            <img src="images/kolaygologo.png" alt="KolayGO Nakliyat Logo" class="h-12 rounded-full">
+                        </div>
+                        <span>KOLAYGO <span class="text-[#00D9DA]">NAKLİYAT</span></span>
+                    </a>
+                    <p class="text-gray-300 max-w-md mb-6">Profesyonel, güvenilir ve uygun fiyatlı nakliyat hizmetleri sunuyoruz. 81 ilde hizmetinizdeyiz.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#0063FF] transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#0063FF] transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#0063FF] transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#0063FF] transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <!-- Kurumsal -->
+                    <div>
+                        <h4 class="footer-heading text-white font-semibold mb-6">Kurumsal</h4>
+                        <ul class="space-y-3">
+                            <li><a href="hakkimizda.html" class="text-white/70 hover:text-white transition-colors">Hakkımızda</a></li>
+                            <li><a href="blog.html" class="text-white/70 hover:text-white transition-colors">Blog/Haberler</a></li>
+                            <li><a href="kurumsal-kimlik.html" class="text-white/70 hover:text-white transition-colors">Kurumsal Kimlik</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Hizmetlerimiz -->
+                    <div>
+                        <h4 class="footer-heading text-white font-semibold mb-6">Hizmetlerimiz</h4>
+                        <ul class="space-y-3">
+                            <li><a href="evden-eve-nakliyat.html" class="text-white/70 hover:text-white transition-colors">Evden Eve Nakliyat</a></li>
+                            <li><a href="ofis-tasimaciligi.html" class="text-white/70 hover:text-white transition-colors">Ofis Taşımacılığı</a></li>
+                            <li><a href="sehirlerarasi-nakliyat.html" class="text-white/70 hover:text-white transition-colors">Şehirlerarası Nakliyat</a></li>
+                            <li><a href="parca-esya-tasima.html" class="text-white/70 hover:text-white transition-colors">Parça Eşya Taşıma</a></li>
+                            <li><a href="kurumsal-nakliyat.html" class="text-white/70 hover:text-white transition-colors">Kurumsal Nakliyat</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Müşteri İlişkileri -->
+                    <div>
+                        <h4 class="footer-heading text-white font-semibold mb-6">Müşteri İlişkileri</h4>
+                        <ul class="space-y-3">
+                            <li><a href="iletisim.html" class="text-white/70 hover:text-white transition-colors">İletişim</a></li>
+                            <li><a href="sss.html" class="text-white/70 hover:text-white transition-colors">Sık Sorulan Sorular</a></li>
+                            <li><a href="musteri-yorumlari.html" class="text-white/70 hover:text-white transition-colors">Müşteri Yorumları</a></li>
+                            <li><a href="online-teklif.html" class="text-white/70 hover:text-white transition-colors">Online Teklif Al</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Yasal -->
+                    <div>
+                        <h4 class="footer-heading text-white font-semibold mb-6">Yasal</h4>
+                        <ul class="space-y-3">
+                            <li><a href="nakliyat-sigortasi.html" class="text-white/70 hover:text-white transition-colors">Nakliyat Sigortası</a></li>
+                            <li><a href="gizlilik-politikasi.html" class="text-white/70 hover:text-white transition-colors">Gizlilik Politikası</a></li>
+                            <li><a href="kullanim-kosullari.html" class="text-white/70 hover:text-white transition-colors">Kullanım Koşulları</a></li>
+                            <li><a href="cerez-politikasi.html" class="text-white/70 hover:text-white transition-colors">Çerez Politikası</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white/70 mb-4 md:mb-0">Tüm Hakları Saklıdır. © 2025 KOLAYGO Nakliyat</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobil Menü -->
+    <div class="mobile-menu fixed inset-0 bg-[#0052CC] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-4">
+            <button id="closeMobileMenu" class="text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center space-y-6 mt-8">
+            <a href="index.html" class="text-white text-xl hover:text-[#00D9DA] transition-colors">Ana Sayfa</a>
+            <a href="hakkimizda.html" class="text-white text-xl hover:text-[#00D9DA] transition-colors">Hakkımızda</a>
+            <a href="hizmetlerimiz.html" class="text-white text-xl hover:text-[#00D9DA] transition-colors">Hizmetlerimiz</a>
+            <a href="iletisim.html" class="text-white text-xl hover:text-[#00D9DA] transition-colors">İletişim</a>
+            <div class="pt-6 border-t border-white/20 w-48 text-center">
+                <a href="tel:05324571362" class="text-white text-xl flex items-center justify-center mb-4 hover:text-[#00D9DA] transition-colors">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    0532 457 13 62
+                </a>
+                <a href="https://wa.me/905324571362" target="_blank" class="btn-whatsapp py-3 mt-4 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-[#4052CC] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+
+            // Navbar scrolled effect
+            const topBar = document.querySelector('.top-bar');
+            if(window.pageYOffset > 100) {
+                topBar.classList.add('scrolled');
+            } else {
+                topBar.classList.remove('scrolled');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Language Selector
+        const languageSelector = document.querySelector('.language-selector');
+        if (languageSelector) {
+            languageSelector.addEventListener('click', () => {
+                const options = languageSelector.querySelector('.language-options');
+                options.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!languageSelector.contains(e.target)) {
+                    const options = languageSelector.querySelector('.language-options');
+                    options.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

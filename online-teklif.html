@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Teklif Al | KolayGO Nakliyat</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#4052CC">
+    <meta name="theme-color" content="#4052CC">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-24">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-white flex items-center">
+                        <div class="bg-white p-1.5 rounded-full mr-3 flex items-center justify-center">
+                            <img src="images/kolaygologo.png" alt="KolayGO Nakliyat Logo" class="h-16 rounded-full">
+                        </div>
+                        <span class="text-white tracking-wider">KOLAYGO <span class="text-[#00D9DA]">NAKLİYAT</span></span>
+                    </a>
+                    <nav class="ml-8 hidden md:flex space-x-6">
+                        <a href="index.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Ana Sayfa</a>
+                        <a href="hakkimizda.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Hakkımızda</a>
+                        <a href="hizmetlerimiz.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Hizmetlerimiz</a>
+                        <a href="iletisim.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">İletişim</a>
+                    </nav>
+                </div>
+
+                <!-- Right Side -->
+                <div class="flex items-center space-x-6">
+                    <!-- Language Selector -->
+                    <div class="language-selector relative">
+                        <button class="flex items-center text-white">
+                            <i class="fas fa-globe mr-2"></i>
+                            tr
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="language-options hidden absolute top-full right-0 bg-white rounded-lg shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">English</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Türkçe</a>
+                        </div>
+                    </div>
+
+                    <!-- İletişim Butonları -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <a href="tel:05324571362" class="bg-white/10 hover:bg-white/20 text-white flex items-center px-4 py-2 rounded-lg transition-all duration-300 group">
+                            <i class="fas fa-phone-alt mr-2 text-[#00D9DA] group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span class="font-medium">0532 457 13 62</span>
+                        </a>
+                        <a href="https://wa.me/905324571362" target="_blank" class="btn-whatsapp flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <span class="font-medium">WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Mobil Menü Butonu -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-[#4052CC] to-[#0063FF] py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center text-white relative z-10">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Online Teklif Al</h1>
+                    <p class="text-xl text-white/90 mb-8">Hemen ücretsiz fiyat teklifi alın, size özel nakliyat çözümlerimizden faydalanın</p>
+                </div>
+            </div>
+            <!-- Dekoratif Elementler -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <form id="teklifForm" class="space-y-6">
+                            <!-- İsim Soyisim -->
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="isim">İsim Soyisim</label>
+                                <input type="text" id="isim" name="isim" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all">
+                            </div>
+
+                            <!-- Telefon -->
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="telefon">Telefon Numarası</label>
+                                <div class="relative">
+                                    <div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                                        <img src="/tr-flag.png" alt="TR" class="w-5 h-4">
+                                        <span class="text-gray-500">+90</span>
+                                    </div>
+                                    <input type="tel" id="telefon" name="telefon" required
+                                        class="w-full px-4 py-3 pl-24 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all"
+                                        placeholder="(5XX) XXX XX XX">
+                                </div>
+                            </div>
+
+                            <!-- E-posta -->
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="eposta">E-posta Adresi</label>
+                                <input type="email" id="eposta" name="eposta" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all"
+                                    placeholder="ornek@email.com">
+                            </div>
+
+                            <!-- Nereden - Nereye -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="nereden">Nereden</label>
+                                    <select id="nereden" name="nereden" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all">
+                                        <option value="">Şehir Seçin</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="nereye">Nereye</label>
+                                    <select id="nereye" name="nereye" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all">
+                                        <option value="">Şehir Seçin</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Mesaj -->
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2" for="mesaj">Taşınma Detayları</label>
+                                <textarea id="mesaj" name="mesaj" rows="4" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#4052CC] focus:ring-1 focus:ring-[#4052CC] outline-none transition-all resize-none"
+                                    placeholder="Lütfen taşınacak eşyalarınız, evinizin büyüklüğü (1+1, 2+1 vb.), kat bilgisi ve özel notlarınızı belirtin..."></textarea>
+                            </div>
+
+                            <!-- KVKK Onayı -->
+                            <div class="flex items-start gap-2">
+                                <input type="checkbox" id="kvkk" name="kvkk" required class="mt-1">
+                                <label for="kvkk" class="text-sm text-gray-600">
+                                    Kişisel verilerimin işlenmesine ilişkin <a href="#" class="text-[#4052CC] hover:underline">Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
+                                </label>
+                            </div>
+
+                            <!-- Gönder Butonu -->
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-[#4052CC] to-[#0063FF] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all">
+                                Teklif Al
+                            </button>
+
+                            <!-- WhatsApp Alternatifi -->
+                            <div class="text-center">
+                                <p class="text-gray-600 mb-4">veya</p>
+                                <a href="https://wa.me/905324571362" target="_blank"
+                                    class="inline-flex items-center justify-center w-full bg-[#25D366] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#1ea952] transition-all">
+                                    <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                                    WhatsApp ile Hemen Teklif Alın
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İstatistikler Section -->
+        <section class="py-16 bg-[#0F172A] relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#4052CC]/10 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Mutlu Müşteri -->
+                    <div class="text-center">
+                        <h3 class="text-[#00D9DA] text-4xl font-bold mb-2">15K+</h3>
+                        <p class="text-white/80">Mutlu Müşteri</p>
+                    </div>
+                    
+                    <!-- İl Genelinde Hizmet -->
+                    <div class="text-center">
+                        <h3 class="text-[#00D9DA] text-4xl font-bold mb-2">81</h3>
+                        <p class="text-white/80">İl Genelinde Hizmet</p>
+                    </div>
+                    
+                    <!-- Hizmet Noktaları -->
+                    <div class="text-center">
+                        <h3 class="text-[#00D9DA] text-4xl font-bold mb-2">250+</h3>
+                        <p class="text-white/80">Hizmet Noktaları</p>
+                    </div>
+                    
+                    <!-- Yıllık Tecrübe -->
+                    <div class="text-center">
+                        <h3 class="text-[#00D9DA] text-4xl font-bold mb-2">14+</h3>
+                        <p class="text-white/80">Yıllık Tecrübe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nakliyat Güvencesi Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-[#1a365d] mb-12">Nakliyat Güvencelerimiz</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Sigorta Güvencesi -->
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-[#4052CC] p-3 rounded-lg">
+                                    <i class="fas fa-shield-alt text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-[#1a365d] mb-2">Tam Sigorta Güvencesi</h3>
+                                    <p class="text-gray-600">Tüm eşyalarınız taşıma sürecinde sigorta kapsamındadır. Olası hasarlara karşı %100 güvence sağlıyoruz.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profesyonel Ekip -->
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-[#4052CC] p-3 rounded-lg">
+                                    <i class="fas fa-users text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-[#1a365d] mb-2">Uzman Ekip</h3>
+                                    <p class="text-gray-600">Deneyimli ve profesyonel ekibimiz, eşyalarınızı özenle paketler ve güvenle taşır.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hızlı Teslimat -->
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-[#4052CC] p-3 rounded-lg">
+                                    <i class="fas fa-truck text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-[#1a365d] mb-2">Zamanında Teslimat</h3>
+                                    <p class="text-gray-600">Planlanan tarih ve saatte eşyalarınızı yeni adresinize teslim ediyoruz.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7/24 Destek -->
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-[#4052CC] p-3 rounded-lg">
+                                    <i class="fas fa-headset text-2xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-[#1a365d] mb-2">7/24 Müşteri Desteği</h3>
+                                    <p class="text-gray-600">Taşınma sürecinizde her an yanınızdayız. Sorularınız için 7/24 ulaşabilirsiniz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Firma Bilgileri -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">KOLAYGO Nakliyat</h3>
+                        <p class="mb-4 text-gray-400">İstanbul'un her yerinde güvenilir ve profesyonel nakliyat hizmetleri sunuyoruz.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kurumsal -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Kurumsal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Ana Sayfa</a></li>
+                            <li><a href="hakkimizda.html" class="text-gray-400 hover:text-white transition-colors">Hakkımızda</a></li>
+                            <li><a href="hizmetlerimiz.html" class="text-gray-400 hover:text-white transition-colors">Hizmetlerimiz</a></li>
+                            <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog/Haberler</a></li>
+                            <li><a href="kurumsal-kimlik.html" class="text-gray-400 hover:text-white transition-colors">Kurumsal Kimlik</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Müşteri İlişkileri -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Müşteri İlişkileri</h3>
+                        <ul class="space-y-2">
+                            <li><a href="iletisim.html" class="text-gray-400 hover:text-white transition-colors">İletişim</a></li>
+                            <li><a href="sss.html" class="text-gray-400 hover:text-white transition-colors">Sık Sorulan Sorular</a></li>
+                            <li><a href="musteri-yorumlari.html" class="text-gray-400 hover:text-white transition-colors">Müşteri Yorumları</a></li>
+                            <li><a href="online-teklif.html" class="text-gray-400 hover:text-white transition-colors">Online Teklif Al</a></li>
+                            <li><a href="nakliyat-sigortasi.html" class="text-gray-400 hover:text-white transition-colors">Nakliyat Sigortası</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Yasal -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Yasal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="gizlilik-politikasi.html" class="text-gray-400 hover:text-white transition-colors">Gizlilik Politikası</a></li>
+                            <li><a href="kullanim-kosullari.html" class="text-gray-400 hover:text-white transition-colors">Kullanım Koşulları</a></li>
+                            <li><a href="cerez-politikasi.html" class="text-gray-400 hover:text-white transition-colors">Çerez Politikası</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">Tüm Hakları Saklıdır. © 2025 KOLAYGO Nakliyat.</p>
+                    <div class="flex space-x-6">
+                        <a href="tel:05324571362" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-phone-alt mr-2"></i>0532 457 13 62
+                        </a>
+                        <a href="mailto:info@kolaygonakliyat.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>info@kolaygonakliyat.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905324571362" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu" class="fixed inset-0 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-4">
+            <button id="closeMenu" class="text-white text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-full">
+            <a href="index.html" class="text-white text-xl py-3">Ana Sayfa</a>
+            <a href="hakkimizda.html" class="text-white text-xl py-3">Hakkımızda</a>
+            <a href="hizmetlerimiz.html" class="text-white text-xl py-3">Hizmetlerimiz</a>
+            <a href="iletisim.html" class="text-white text-xl py-3">İletişim</a>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-20 bg-blue-600 text-white p-3 rounded-full shadow-lg z-50 hidden hover:bg-blue-700 transition-colors">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // İl listesi
+        const iller = [
+            "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir",
+            "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli",
+            "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari",
+            "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir",
+            "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir",
+            "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat",
+            "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman",
+            "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
+        ].sort();
+
+        // İl seçeneklerini doldur
+        const neredenSelect = document.getElementById('nereden');
+        const nereyeSelect = document.getElementById('nereye');
+
+        iller.forEach(il => {
+            neredenSelect.add(new Option(il, il));
+            nereyeSelect.add(new Option(il, il));
+        });
+
+        // Form gönderimi
+        document.getElementById('teklifForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form verilerini işleme
+            alert('Talebiniz alınmıştır. En kısa sürede size dönüş yapacağız.');
+            this.reset();
+        });
+
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+        
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Language Selector
+        const languageSelector = document.querySelector('.language-selector');
+        if (languageSelector) {
+            languageSelector.addEventListener('click', () => {
+                const options = languageSelector.querySelector('.language-options');
+                options.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!languageSelector.contains(e.target)) {
+                    const options = languageSelector.querySelector('.language-options');
+                    options.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular | KolayGO Nakliyat</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#4052CC">
+    <meta name="theme-color" content="#4052CC">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary-color: #0063FF;
+            --primary-dark: #0045b5;
+            --primary-light: #3486ff;
+            --secondary-color: #00D9DA;
+            --text-dark: #1E293B;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --bg-dark: #0F172A;
+            --success: #10B981;
+            --warning: #FBBF24;
+            --danger: #F43F5E;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+        
+        .hero-section {
+            background: linear-gradient(125deg, #1a2980 0%, #0063FF 50%, #00D9DA 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"),
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 25%),
+                radial-gradient(circle at 60% 30%, rgba(0, 217, 218, 0.15) 0%, transparent 30%);
+            background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%;
+            z-index: 0;
+            animation: pulse-bg 15s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse-bg {
+            0% {
+                background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+            }
+            50% {
+                background-position: 20px 20px, 10% 30%, 100% 90%, 70% 40%;
+            }
+            100% {
+                background-position: 0px 0px, 20% 40%, 110% 100%, 80% 50%;
+            }
+        }
+        
+        .top-bar {
+            background: linear-gradient(90deg, #4052CC 0%, #0063FF 100%);
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .top-bar.scrolled {
+            background: linear-gradient(90deg, rgba(64, 82, 204, 0.95) 0%, rgba(0, 99, 255, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .footer {
+            background: #4052CC;
+            color: white;
+            padding: 4rem 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 90%, rgba(0, 217, 218, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 10%, rgba(0, 99, 255, 0.1) 0%, transparent 20%);
+            z-index: 0;
+        }
+        
+        .footer-heading {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 30px;
+            height: 3px;
+            background: #00D9DA;
+            border-radius: 1.5px;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+        }
+        
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .faq-toggle {
+            background-color: white;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-toggle:hover {
+            background-color: rgba(0, 99, 255, 0.03);
+        }
+        
+        .faq-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37,211,102,0.25);
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37,211,102,0.3);
+        }
+        
+        /* İkonlar için stil */
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            color: white;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .icon-circle:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .main-content {
+            padding-top: 96px;
+            min-height: calc(100vh - 96px - 400px);
+        }
+        
+        .language-selector {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .language-selector:hover .language-options {
+            display: block;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .language-options {
+            display: block;
+            position: absolute;
+            top: 120%;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .language-selector:hover .language-options {
+            pointer-events: auto;
+        }
+        
+        /* Mobil Menü Stil */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bg-dark);
+            z-index: 200;
+            transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.open {
+            right: 0;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 120px;
+            right: 24px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0063FF 0%, #00D9DA 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,99,255,0.25);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+            z-index: 40;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-to-top:hover {
+            background: linear-gradient(135deg, #0045b5 0%, #00b8b9 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,99,255,0.4);
+        }
+        
+        .scroll-to-top i {
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-to-top:hover i {
+            transform: translateY(-3px);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Whatsapp hover effect */
+        .whatsapp-hover-text {
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover .whatsapp-hover-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-24">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-extrabold text-white flex items-center">
+                        <div class="bg-white p-1.5 rounded-full mr-3 flex items-center justify-center">
+                            <img src="images/kolaygologo.png" alt="KolayGo Nakliyat Logo" class="h-16 rounded-full">
+                        </div>
+                        <span class="text-white tracking-wider">KOLAYGO <span class="text-[#00D9DA]">NAKLİYAT</span></span>
+                    </a>
+                    <nav class="ml-8 hidden md:flex space-x-6">
+                        <a href="index.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Ana Sayfa</a>
+                        <a href="hakkimizda.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Hakkımızda</a>
+                        <a href="hizmetlerimiz.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">Hizmetlerimiz</a>
+                        <a href="iletisim.html" class="text-white hover:text-[#00D9DA] transition-colors py-2 border-b-2 border-transparent hover:border-[#00D9DA]">İletişim</a>
+                    </nav>
+                </div>
+
+                <!-- Right Side -->
+                <div class="flex items-center space-x-6">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="flex items-center text-white">
+                            <i class="fas fa-globe mr-2"></i>
+                            tr
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="language-options">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">English</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm">Türkçe</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobil Menü Butonu -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+
+                    <!-- İletişim Butonları - Sadece Desktop -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <!-- Telefon Numarası -->
+                        <a href="tel:05324571362" class="bg-white/10 hover:bg-white/20 text-white flex items-center px-4 py-2 rounded-lg transition-all duration-300 group">
+                            <i class="fas fa-phone-alt mr-2 text-[#00D9DA] group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span class="font-medium">0532 457 13 62</span>
+                        </a>
+
+                        <!-- WhatsApp Butonu -->
+                        <a href="https://wa.me/905324571362" target="_blank" class="btn-whatsapp flex items-center">
+                            <i class="fab fa-whatsapp mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span class="font-medium">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Başlık Bölümü -->
+        <section class="py-12 bg-gradient-to-r from-[#0063FF] to-[#00D9DA] text-white">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-center">Sıkça Sorulan Sorular</h1>
+                <p class="text-xl text-center mt-4 max-w-3xl mx-auto">KolayGo Nakliyat hizmetleri hakkında sık sorulan soruları ve cevaplarını bu sayfada bulabilirsiniz.</p>
+            </div>
+        </section>
+
+        <!-- SSS Bölümü -->
+        <section class="faq-container bg-[#F8FAFC] py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap md:flex-nowrap gap-12">
+                    <!-- Sol Taraf - Simgeler -->
+                    <div class="w-full md:w-1/3 flex flex-col items-center justify-center">
+                        <div class="relative w-64 h-64">
+                            <!-- Merkez Logo -->
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-[#0F172A] rounded-full flex items-center justify-center z-20 shadow-xl">
+                                <img src="images/kolaygologo.png" alt="KolayGO Nakliyat" class="w-20 h-20 object-contain rounded-full">
+                            </div>
+                            
+                            <!-- Çevreleyen Simgeler -->
+                            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-16 h-16 bg-[#0063FF] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-truck text-white text-2xl"></i>
+                            </div>
+                            
+                            <div class="absolute top-1/4 right-0 transform translate-x-1/4 w-16 h-16 bg-[#00D9DA] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-box-open text-white text-2xl"></i>
+                            </div>
+                            
+                            <div class="absolute bottom-1/4 right-0 transform translate-x-1/4 w-16 h-16 bg-[#0063FF] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                            </div>
+                            
+                            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-16 h-16 bg-[#00D9DA] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            
+                            <div class="absolute bottom-1/4 left-0 transform -translate-x-1/4 w-16 h-16 bg-[#0063FF] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+                            </div>
+                            
+                            <div class="absolute top-1/4 left-0 transform -translate-x-1/4 w-16 h-16 bg-[#00D9DA] rounded-full flex items-center justify-center z-10 shadow-lg">
+                                <i class="fas fa-clock text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <h3 class="text-2xl font-bold text-[#0F172A] mb-2">KolayGO Nakliyat</h3>
+                            <p class="text-[#64748B]">2011'den beri güvenilir taşımacılık hizmetleri</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sağ Taraf - Akordiyon -->
+                    <div class="w-full md:w-2/3">
+                        <div class="space-y-4">
+                            <!-- Soru 1 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Taşınma sürecinde eşyalarım nasıl paketleniyor?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">KolayGO Nakliyat olarak tüm eşyalarınızı özel ambalaj malzemeleriyle paketliyoruz. Kırılacak eşyalar için özel kabarcıklı naylonlar, mobilyalar için shrink ve battaniyeler, giysiler için elbise kolileri kullanmaktayız. Hassas eşyalarınız için ek koruma önlemleri alınmaktadır.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 2 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Taşınma fiyatları nasıl belirleniyor?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Taşınma fiyatlarımız, eşyalarınızın hacmi, taşınacak mesafe, kat durumu, asansör kullanım imkanı ve özel paketleme ihtiyaçları gibi faktörlere göre belirlenmektedir. Her müşterimize özel fiyat teklifi sunuyoruz. Ücretsiz keşif hizmetimizle eşyalarınızı yerinde görerek en doğru fiyatı belirleyebiliriz.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 3 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Şehirlerarası taşımacılık hizmeti veriyor musunuz?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Evet, KolayGO Nakliyat olarak Türkiye'nin her iline şehirlerarası nakliyat hizmeti vermekteyiz. İstanbul merkezli olmamıza rağmen, tüm Türkiye genelinde güvenilir ve hızlı taşımacılık hizmetleri sunuyoruz. Şehirlerarası taşımacılıkta eşyalarınız özel olarak paketlenir ve sigortalı şekilde taşınır.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 4 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Eşyalarım sigortalı mı taşınıyor?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">KolayGO Nakliyat olarak tüm taşımacılık hizmetlerimizde eşyalarınız sigorta kapsamındadır. Taşıma esnasında meydana gelebilecek hasar ve kayıplara karşı eşyalarınız güvence altındadır. Sigorta detayları için taşınma öncesinde müşteri temsilcimizle görüşmenizi öneririz.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 5 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Taşınma için ne kadar önceden rezervasyon yapmalıyım?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Özellikle yoğun dönemlerde (yaz ayları, ay başları ve sonları) en az 1 hafta önceden rezervasyon yapmanızı öneririz. Ancak müsaitlik durumuna göre daha kısa sürede de hizmet verebilmekteyiz. Acil taşınma durumlarında da bizi arayabilirsiniz, elimizden geldiğince yardımcı olmaya çalışırız.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 6 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Parça eşya taşıma hizmeti veriyor musunuz?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Evet, KolayGO Nakliyat olarak tek bir eşyanızı bile taşıma hizmeti vermekteyiz. Beyaz eşya, mobilya, elektronik cihaz gibi parça eşyalarınızı da güvenle istediğiniz adrese taşıyoruz. Parça eşya taşımacılığında da sigortalı ve güvenli hizmet anlayışımız geçerlidir.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 7 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Taşınma sırasında ben ne yapmalıyım?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Taşınma sürecinde sizin rahat etmeniz önceliğimizdir. Değerli ve kişisel eşyalarınızı (mücevher, önemli evraklar, nakit para vb.) kendiniz yanınızda bulundurmanızı öneririz. Bunun dışında tüm paketleme, taşıma, demontaj ve montaj işlemlerini profesyonel ekibimiz gerçekleştirecektir. Taşınma günü sadece ekibimize eşyaların yerleşim düzeni konusunda yönlendirme yapmanız yeterlidir.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Soru 8 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Hangi ödeme yöntemlerini kabul ediyorsunuz?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">KolayGO Nakliyat olarak nakit, banka havalesi/EFT ve kredi kartı ile ödeme kabul etmekteyiz. Ödemelerinizi taşınma tamamlandıktan sonra yapabilirsiniz. Bazı durumlarda, özellikle şehirlerarası taşımalarda kısmi ön ödeme talep edilebilir.</p>
+                                </div>
+                            </div>
+
+                            <!-- Soru 9 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Ofis taşımacılığı hizmetiniz var mı?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Evet, KolayGO Nakliyat olarak ofis taşımacılığı konusunda da uzmanız. İş yerlerinin taşınması hassasiyet gerektiren bir süreçtir. Ofis mobilyaları, elektronik ekipmanlar ve dosyalar özel olarak paketlenir. Taşınma sürecini genellikle hafta sonları veya mesai saatleri dışında gerçekleştirerek iş akışınızın minimum düzeyde etkilenmesini sağlıyoruz.</p>
+                                </div>
+                            </div>
+
+                            <!-- Soru 10 -->
+                            <div class="border border-gray-200 rounded-xl overflow-hidden">
+                                <button class="faq-toggle w-full flex items-center justify-between bg-white p-5 text-left transition-all hover:bg-gray-50">
+                                    <span class="text-lg font-semibold">Taşınma sürecinde eşyalarımda hasar oluşursa ne yapmalıyım?</span>
+                                    <i class="fas fa-chevron-down text-[#0063FF] transition-transform"></i>
+                                </button>
+                                <div class="faq-content bg-white px-5 pb-5 hidden">
+                                    <p class="text-[#64748B]">Profesyonel ekibimiz ve titiz çalışma prensibimiz sayesinde eşyalarınızda hasar oluşma olasılığı çok düşüktür. Ancak beklenmedik bir durumda hasar oluşması halinde, durumu hemen tespit edip müşteri hizmetlerimize bildirmeniz gerekmektedir. Sigorta kapsamında olan hasarlar için gerekli prosedürler başlatılacak ve en kısa sürede zararınız tazmin edilecektir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Firma Bilgileri -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">KOLAYGO Nakliyat</h3>
+                    <p class="mb-4 text-gray-400">İstanbul'un her yerinde güvenilir ve profesyonel nakliyat hizmetleri sunuyoruz.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kurumsal -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kurumsal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html" class="text-gray-400 hover:text-white transition-colors">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html" class="text-gray-400 hover:text-white transition-colors">Hizmetlerimiz</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog/Haberler</a></li>
+                        <li><a href="kurumsal-kimlik.html" class="text-gray-400 hover:text-white transition-colors">Kurumsal Kimlik</a></li>
+                    </ul>
+                </div>
+
+                <!-- Müşteri İlişkileri -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Müşteri İlişkileri</h3>
+                    <ul class="space-y-2">
+                        <li><a href="iletisim.html" class="text-gray-400 hover:text-white transition-colors">İletişim</a></li>
+                        <li><a href="sss.html" class="text-gray-400 hover:text-white transition-colors">Sık Sorulan Sorular</a></li>
+                        <li><a href="musteri-yorumlari.html" class="text-gray-400 hover:text-white transition-colors">Müşteri Yorumları</a></li>
+                        <li><a href="online-teklif.html" class="text-gray-400 hover:text-white transition-colors">Online Teklif Al</a></li>
+                        <li><a href="nakliyat-sigortasi.html" class="text-gray-400 hover:text-white transition-colors">Nakliyat Sigortası</a></li>
+                    </ul>
+                </div>
+
+                <!-- Yasal -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Yasal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="gizlilik-politikasi.html" class="text-gray-400 hover:text-white transition-colors">Gizlilik Politikası</a></li>
+                        <li><a href="kullanim-kosullari.html" class="text-gray-400 hover:text-white transition-colors">Kullanım Koşulları</a></li>
+                        <li><a href="cerez-politikasi.html" class="text-gray-400 hover:text-white transition-colors">Çerez Politikası</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">Tüm Hakları Saklıdır. © 2025 KOLAYGO Nakliyat.</p>
+                <div class="flex space-x-6">
+                    <a href="tel:05324571362" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-phone-alt mr-2"></i>0532 457 13 62
+                    </a>
+                    <a href="mailto:info@kolaygonakliyat.com" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>info@kolaygonakliyat.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905324571362" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobileMenu" class="fixed inset-0 bg-gray-900 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-4">
+            <button id="closeMenu" class="text-white text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-full">
+            <a href="index.html" class="text-white text-xl py-3">Ana Sayfa</a>
+            <a href="hakkimizda.html" class="text-white text-xl py-3">Hakkımızda</a>
+            <a href="hizmetlerimiz.html" class="text-white text-xl py-3">Hizmetlerimiz</a>
+            <a href="iletisim.html" class="text-white text-xl py-3">İletişim</a>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-20 bg-blue-600 text-white p-3 rounded-full shadow-lg z-50 hidden hover:bg-blue-700 transition-colors">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('translate-x-full');
+        });
+        
+        document.getElementById('closeMenu').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('translate-x-full');
+        });
+        
+        // Scroll to top button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+        
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 

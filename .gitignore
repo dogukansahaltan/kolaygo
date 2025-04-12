@@ -1,0 +1,56 @@
+# Node.js için .gitignore dosyası
+
+# Bağımlılıklar
+/node_modules
+/npm-debug.log
+/yarn-debug.log
+/yarn-error.log
+.pnpm-debug.log*
+.yarn-integrity
+
+# Ortam değişkenleri
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Derleme çıktıları
+/dist
+/build
+/.next
+/out
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+.directory
+
+# Log dosyaları
+*.log
+
+# Önbellek ve geçici dosyalar
+.cache/
+.temp/
+.tmp/
+/coverage
+
+# IDE ve metin düzenleyici dosyaları
+/.idea
+/.vscode
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Yerel dosyalar ve test dosyaları
+/local
+.vercel 
